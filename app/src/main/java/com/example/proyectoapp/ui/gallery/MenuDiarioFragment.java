@@ -1,25 +1,21 @@
-package com.example.proyectoapp.ui.home;
+package com.example.proyectoapp.ui.gallery;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.ViewModelProvider;
 
 import com.example.proyectoapp.R;
-import com.example.proyectoapp.databinding.FragmentHomeBinding;
 
-public class HomeFragment extends Fragment {
+public class MenuDiarioFragment extends Fragment {
 
-    private FragmentHomeBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        View root = inflater.inflate(R.layout.fragment_home, container, false);
+        View root = inflater.inflate(R.layout.menu_diario_fragment, container, false);
 
 
         return root;

@@ -12,10 +12,6 @@ import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-//PRUEBA NUMERO 4 GITHUB
-//PROBANDO UPDATE
-//puto
-
 public class RegistrarseActivity extends AppCompatActivity {
 
     private EditText editText;
@@ -80,5 +76,9 @@ public class RegistrarseActivity extends AppCompatActivity {
         startActivity(new Intent(RegistrarseActivity.this, LoginActivity.class));
 
 
+    }
+
+    public void mainActivity(View view) {
+        startActivity(new Intent(RegistrarseActivity.this, MainActivity.class));
     }
 }
