@@ -13,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 
 //ESTO ES UNA PRUEBA DE COMMIT
+//ESTO NO ES UNA PRUEBA DE COMMIT
 public class RegistrarseActivity extends AppCompatActivity {
 
     private EditText editText;
