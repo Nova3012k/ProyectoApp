@@ -11,7 +11,7 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import androidx.appcompat.app.AppCompatActivity;
 
-
+//MENSAJE DE PRUEBA 4
 public class RegistrarseActivity extends AppCompatActivity {
 
     private EditText editText;
