@@ -11,6 +11,8 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import androidx.appcompat.app.AppCompatActivity;
 
+
+//ESTO ES UNA PRUEBA DE COMMIT
 public class RegistrarseActivity extends AppCompatActivity {
 
     private EditText editText;
