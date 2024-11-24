@@ -9,13 +9,14 @@ import android.text.method.PasswordTransformationMethod;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.proyectoapp.MainActivity;
 import com.example.proyectoapp.R;
 
-public class RegistrarseActivity extends AppCompatActivity {
+public class RegistrarseActivity extends AppCompatActivity{
 
     private EditText editText;
     private EditText editText2;
@@ -73,7 +74,17 @@ public class RegistrarseActivity extends AppCompatActivity {
     }
     public void register(View view) {
         startActivity(new Intent(RegistrarseActivity.this, LoginActivity.class));
+
+        String nombre = editText.getText().toString().trim();
+        String apellido = editText2.getText().toString().trim();
+        String email = editText4.getText().toString().trim();
+
+        if (nombre.isEmpty() || apellido.isEmpty() || email.isEmpty()) {
+            Toast.makeText(this, "Por favor, completa todos los campos", Toast.LENGTH_SHORT).show();
+            return;
+        }
     }
+
 
     public void Login(View view) {
         startActivity(new Intent(RegistrarseActivity.this, LoginActivity.class));
