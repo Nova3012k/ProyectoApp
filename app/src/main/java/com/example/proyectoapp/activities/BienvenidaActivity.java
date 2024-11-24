@@ -1,4 +1,4 @@
-package com.example.proyectoapp;
+package com.example.proyectoapp.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,11 +6,9 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+
+import com.example.proyectoapp.R;
 
 public class BienvenidaActivity extends AppCompatActivity {
 
@@ -25,10 +23,10 @@ public class BienvenidaActivity extends AppCompatActivity {
     }
 
     public void register(View view) {
-        startActivity(new Intent(BienvenidaActivity.this,RegistrarseActivity.class));
+        startActivity(new Intent(BienvenidaActivity.this, RegistrarseActivity.class));
     }
 
     public void Login(View view) {
-        startActivity(new Intent(BienvenidaActivity.this,LoginActivity.class));
+        startActivity(new Intent(BienvenidaActivity.this, LoginActivity.class));
     }
 }

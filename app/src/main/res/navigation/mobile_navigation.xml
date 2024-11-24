@@ -24,7 +24,7 @@
         tools:layout="@layout/fragment_favourites" />
     <fragment
         android:id="@+id/nav_carrito"
-        android:name="com.example.proyectoapp.CarritoFragment"
+        android:name="com.example.proyectoapp.ui.CarritoFragment"
         android:label="Carrito"
         tools:layout="@layout/fragment_carrito" />
 </navigation>

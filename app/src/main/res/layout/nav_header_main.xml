@@ -24,11 +24,11 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="@dimen/nav_header_vertical_spacing"
-        android:text="@string/cuenta"
+        android:paddingTop="8dp"
+        android:text="Jorge Nova"
         android:textStyle="bold"
-        android:textColor="@color/white"
         android:layout_marginLeft="11dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
 
 </LinearLayout>
