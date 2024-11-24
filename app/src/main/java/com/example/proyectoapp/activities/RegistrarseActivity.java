@@ -20,6 +20,7 @@ public class RegistrarseActivity extends AppCompatActivity{
 
     private EditText editText;
     private EditText editText2;
+    private EditText editText3;
     private EditText editText4; // Campo para la contraseña
     private ImageButton visibilidadContraseña; // Botón para mostrar/ocultar contraseña
     private boolean isPasswordVisible = false; // Estado inicial de visibilidad de la contraseña
@@ -31,6 +32,7 @@ public class RegistrarseActivity extends AppCompatActivity{
 
         editText = findViewById(R.id.editText);
         editText2 = findViewById(R.id.editText2);
+        editText3 = findViewById(R.id.editText3);
         editText4 = findViewById(R.id.editText4);
         visibilidadContraseña = findViewById(R.id.visibilidadContraseña);
 
@@ -77,14 +79,14 @@ public class RegistrarseActivity extends AppCompatActivity{
 
         String nombre = editText.getText().toString().trim();
         String apellido = editText2.getText().toString().trim();
-        String email = editText4.getText().toString().trim();
+        String email = editText3.getText().toString().trim();
+        String contrasena = editText4.getText().toString().trim();
 
         if (nombre.isEmpty() || apellido.isEmpty() || email.isEmpty()) {
             Toast.makeText(this, "Por favor, completa todos los campos", Toast.LENGTH_SHORT).show();
             return;
         }
     }
-
 
     public void Login(View view) {
         startActivity(new Intent(RegistrarseActivity.this, LoginActivity.class));
