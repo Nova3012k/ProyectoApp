@@ -112,7 +112,7 @@
 
     <ImageButton
         android:id="@+id/visibilidadContraseña"
-        android:layout_width="34dp"
+        android:layout_width="30dp"
         android:layout_height="48dp"
         android:background="@drawable/baseline_remove_red_eye_24"
         android:contentDescription="Mostrar/ocultar contraseña"
@@ -122,6 +122,7 @@
 
 
     <Button
+        android:onClick="mainActivity"
         android:id="@+id/button"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -156,7 +157,7 @@
         android:layout_height="wrap_content"
         android:text="@string/inicia_sesion"
         android:textAlignment="center"
-        android:textColor="@color/purple_500"
+        android:textColor="@color/white"
         android:textSize="18sp"
         android:textStyle="bold"
         android:onClick="Login"

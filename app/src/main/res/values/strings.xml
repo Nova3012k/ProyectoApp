@@ -21,4 +21,10 @@
     <string name="inicia_sesion">Inicia Sesion</string>
     <string name="nombre">Nombre</string>
     <string name="apellido">Apellido</string>
+    <string name="menu_diario">Menu Diario</string>
+    <string name="favoritos">Favoritos</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="carrito">Carrito</string>
+    <string name="cuenta">Cuenta</string>
 </resources>
