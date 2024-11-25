@@ -21,6 +21,7 @@ import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.example.proyectoapp.MainActivity;
 import com.example.proyectoapp.R;
 
@@ -42,6 +43,8 @@ public class RegistrarseActivity extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registrarse);
+
+        requestQueue = Volley.newRequestQueue(this);
 
         editText = findViewById(R.id.editText);
         editText2 = findViewById(R.id.editText2);
