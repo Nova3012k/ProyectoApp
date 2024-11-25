@@ -7,17 +7,30 @@ import android.text.Spanned;
 import android.text.method.HideReturnsTransformationMethod;
 import android.text.method.PasswordTransformationMethod;
 import android.view.View;
+import android.view.textclassifier.TextClassification;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.android.volley.AuthFailureError;
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
 import com.example.proyectoapp.MainActivity;
 import com.example.proyectoapp.R;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class RegistrarseActivity extends AppCompatActivity{
 
+    RequestQueue requestQueue;
+    private static final String URL1 = "http://192.168.1.18/restaurant/registrar.php";
     private EditText editText;
     private EditText editText2;
     private EditText editText3;
@@ -86,6 +99,41 @@ public class RegistrarseActivity extends AppCompatActivity{
             Toast.makeText(this, "Por favor, completa todos los campos", Toast.LENGTH_SHORT).show();
             return;
         }
+
+        createUser(nombre, apellido, email, contrasena);
+    }
+
+    private void createUser(final String nombre, final String apellido, final String email, final String contrasena) {
+
+        StringRequest stringRequest = new StringRequest(
+                Request.Method.POST,
+                URL1,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        Toast.makeText(RegistrarseActivity.this, "correct", Toast.LENGTH_SHORT).show();
+
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+
+                    }
+                }){
+            @Nullable
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                Map<String, String> params = new HashMap<>();
+                params.put("nombre", nombre);
+                params.put("apellido", apellido);
+                params.put("email", email);
+                params.put("contraseña", contrasena);
+                return params;
+            }
+        };
+
+        requestQueue.add(stringRequest);
     }
 
     public void Login(View view) {
