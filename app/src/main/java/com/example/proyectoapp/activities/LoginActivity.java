@@ -68,10 +68,10 @@ public class LoginActivity extends AppCompatActivity {
         String email = editTextEmail.getText().toString().trim();
         String password = editTextPassword.getText().toString().trim();
 
-        if (email.isEmpty() || password.isEmpty()) {
+        /*if (email.isEmpty() || password.isEmpty()) {
             Toast.makeText(this, "Por favor, ingresa tu email y contraseña", Toast.LENGTH_SHORT).show();
             return;
-        }
+        }*/
 
         loginUser(email, password);
     }
