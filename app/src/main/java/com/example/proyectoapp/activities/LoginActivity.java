@@ -78,6 +78,7 @@ public class LoginActivity extends AppCompatActivity {
 
     // Función que envía las credenciales al servidor para validarlas
     private void loginUser(final String email, final String password) {
+        startActivity(new Intent(LoginActivity.this, MainActivity.class));
         StringRequest stringRequest = new StringRequest(
                 Request.Method.POST,
                 URL_LOGIN,
@@ -86,7 +87,6 @@ public class LoginActivity extends AppCompatActivity {
                     public void onResponse(String response) {
                         if (response.trim().equals("Login exitoso")) {
                             Toast.makeText(LoginActivity.this, "Bienvenido", Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(LoginActivity.this, MainActivity.class));
                         } else {
                             Toast.makeText(LoginActivity.this, "Credenciales incorrectas", Toast.LENGTH_SHORT).show();
                         }
