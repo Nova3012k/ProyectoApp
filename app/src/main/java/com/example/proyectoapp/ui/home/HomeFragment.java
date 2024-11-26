@@ -4,32 +4,29 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.proyectoapp.R;
 import com.example.proyectoapp.adapters.HomeHorizontalAdapter;
 import com.example.proyectoapp.adapters.HomeVerticalAdapter;
-import com.example.proyectoapp.databinding.FragmentHomeBinding;
+import com.example.proyectoapp.adapters.UpdateVerticalRec;
 import com.example.proyectoapp.models.HomeHorizontalModel;
 import com.example.proyectoapp.models.HomeVerticalModel;
 
 import java.util.ArrayList;
-import java.util.List;
 
-public class HomeFragment extends Fragment {
+public class HomeFragment extends Fragment implements UpdateVerticalRec {
 
     RecyclerView homeHorizontalRec,homeVerticalRec;
-    List<HomeHorizontalModel> homeHorizontalModelList;
+    ArrayList<HomeHorizontalModel> homeHorizontalModelList;
     HomeHorizontalAdapter homeHorizontalAdapter;
 
     //Deslizar hacia abajo (vertical)
-    List<HomeVerticalModel> homeVerticalModelList;
+    ArrayList<HomeVerticalModel> homeVerticalModelList;
     HomeVerticalAdapter homeVerticalAdapter;
 
 
@@ -47,13 +44,13 @@ public class HomeFragment extends Fragment {
         //Vista horizontal (deslizar derecha)
         homeHorizontalModelList = new ArrayList<>();
 
-        homeHorizontalModelList.add(new HomeHorizontalModel(R.drawable.pizza,"            Pizza"));
+        homeHorizontalModelList.add(new HomeHorizontalModel(R.drawable.pizza,"Pizza"));
         homeHorizontalModelList.add(new HomeHorizontalModel(R.drawable.hamburguesa,"Hamburguesa"));
-        homeHorizontalModelList.add(new HomeHorizontalModel(R.drawable.sandwich,"        Sandwich"));
-        homeHorizontalModelList.add(new HomeHorizontalModel(R.drawable.papas,"           Papas"));
-        homeHorizontalModelList.add(new HomeHorizontalModel(R.drawable.helado,"         Helados"));
+        homeHorizontalModelList.add(new HomeHorizontalModel(R.drawable.pastas,"Pastas"));
+        homeHorizontalModelList.add(new HomeHorizontalModel(R.drawable.bebidas,"Bebidas"));
+        homeHorizontalModelList.add(new HomeHorizontalModel(R.drawable.postres,"Postres"));
 
-        homeHorizontalAdapter = new HomeHorizontalAdapter(getActivity(), homeHorizontalModelList);
+        homeHorizontalAdapter = new HomeHorizontalAdapter(this,getActivity(),homeHorizontalModelList);
         homeHorizontalRec.setAdapter(homeHorizontalAdapter);
         homeHorizontalRec.setLayoutManager(new LinearLayoutManager(getActivity(),RecyclerView.HORIZONTAL,false));
         homeHorizontalRec.setHasFixedSize(true);
@@ -64,17 +61,21 @@ public class HomeFragment extends Fragment {
         //Vista vertical (deslizar abajo)
         homeVerticalModelList = new ArrayList<>();
 
-        homeVerticalModelList.add(new HomeVerticalModel(R.drawable.pizzahawaiana,"Pizza Hawaiana","10:00 - 20:00 min","4.1","$129.00"));
-        homeVerticalModelList.add(new HomeVerticalModel(R.drawable.pizzapeperonni,"Pizza De Pepperoni","10:00 - 15:00 min","4.9","$99.00"));
-        homeVerticalModelList.add(new HomeVerticalModel(R.drawable.pizzamexicana,"Pizza Mexicana","10:00 - 30:00 min","4.4","199.00"));
-
         homeVerticalAdapter = new HomeVerticalAdapter(getActivity(),homeVerticalModelList);
         homeVerticalRec.setAdapter(homeVerticalAdapter);
         homeVerticalRec.setLayoutManager(new LinearLayoutManager(getActivity(),RecyclerView.VERTICAL,false));
-        homeVerticalRec.setHasFixedSize(true);
-        homeVerticalRec.setNestedScrollingEnabled(false);
+
 
 
         return root;
+    }
+
+    @Override
+    public void callBack(int position, ArrayList<HomeVerticalModel> list) {
+
+        homeVerticalAdapter = new HomeVerticalAdapter(getContext(),list);
+        homeVerticalAdapter.notifyDataSetChanged();
+        homeVerticalRec.setAdapter(homeVerticalAdapter);
+
     }
 }

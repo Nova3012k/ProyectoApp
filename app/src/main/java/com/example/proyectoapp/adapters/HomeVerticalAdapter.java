@@ -13,14 +13,16 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.proyectoapp.R;
 import com.example.proyectoapp.models.HomeVerticalModel;
 
+import java.util.AbstractList;
+import java.util.ArrayList;
 import java.util.List;
 
 public class HomeVerticalAdapter extends RecyclerView.Adapter<HomeVerticalAdapter.ViewHolder> {
 
     Context context;
-    List<HomeVerticalModel> list;
+    AbstractList<HomeVerticalModel> list;
 
-    public HomeVerticalAdapter(Context context, List<HomeVerticalModel> list) {
+    public HomeVerticalAdapter(Context context, ArrayList<HomeVerticalModel> list) {
         this.context = context;
         this.list = list;
     }

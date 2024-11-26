@@ -11,22 +11,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <EditText
-            android:id="@+id/editText5"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="6dp"
-            android:background="@drawable/search_bg"
-            android:drawableLeft="@drawable/baseline_search_24"
-            android:drawablePadding="9dp"
-            android:fontFamily="@font/amita"
-            android:hint="Buscar Comida"
-            android:padding="10dp"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white"
-            android:textSize="13sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
             android:layout_width="40dp"
