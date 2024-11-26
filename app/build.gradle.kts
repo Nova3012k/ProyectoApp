@@ -68,4 +68,5 @@ dependencies {
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
     implementation ("com.android.volley:volley:1.2.1")
     implementation ("com.android.volley:volley:1.1.1")
+    implementation ("com.makeramen:roundedimageview:2.3.0")
 }

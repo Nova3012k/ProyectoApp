@@ -32,4 +32,6 @@
     <string name="nombre_del_producto">Nombre del Producto</string>
     <string name="_5_0">5.0</string>
     <string name="_125_00">$125.00</string>
+    <string name="hacer_pedido">Hacer Pedido</string>
+    <string name="mi_carrito">Mi Carrito</string>
 </resources>
