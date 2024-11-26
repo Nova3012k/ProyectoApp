@@ -2,7 +2,7 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_margin="9dp"
     app:cardCornerRadius="10dp"
@@ -30,20 +30,88 @@
             android:background="@drawable/home_bg"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1">
-            
+            app:layout_constraintVertical_bias="1.0">
+
             <TextView
+                android:fontFamily="@font/amita"
                 android:id="@+id/nombre"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Nombre del Producto"
-                android:textColor="@color/white"
                 android:layout_marginTop="10dp"
-                />
-            
-            
+                android:text="@string/nombre_del_producto"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias=".1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias=".15" />
+
+            <ImageView
+                android:id="@+id/rating"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="9dp"
+                android:src="@drawable/estrellas"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1"
+                app:layout_constraintStart_toEndOf="@+id/nombre"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/rating1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_5_0"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/rating"
+                app:layout_constraintEnd_toStartOf="@+id/rating"
+                app:layout_constraintTop_toTopOf="@+id/rating" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:src="@drawable/baseline_access_time_filled_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nombre" />
+
+            <TextView
+                android:id="@+id/temporizador"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="60dp"
+                android:text="@string/_10_00_15_00_min"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nombre"
+                app:layout_constraintVertical_bias="0.413" />
+
+            <TextView
+                android:id="@+id/precio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_125_00"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/temporizador"
+                app:layout_constraintTop_toBottomOf="@+id/rating1"
+                app:layout_constraintHorizontal_bias=".96"
+                android:layout_marginRight="9dp"/>
+
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 

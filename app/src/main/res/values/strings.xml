@@ -28,4 +28,8 @@
     <string name="carrito">Carrito</string>
     <string name="cuenta">Cuenta</string>
     <string name="inicio">Inicio</string>
+    <string name="_10_00_15_00_min">10:00 - 15:00 min</string>
+    <string name="nombre_del_producto">Nombre del Producto</string>
+    <string name="_5_0">5.0</string>
+    <string name="_125_00">$125.00</string>
 </resources>
