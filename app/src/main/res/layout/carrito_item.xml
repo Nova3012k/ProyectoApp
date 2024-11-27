@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="100dp"
+    android:layout_height="126dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_marginBottom="5dp">
     
@@ -37,7 +37,6 @@
                 android:textSize="24sp"
                 android:textStyle="bold"/>
 
-            
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -46,7 +45,7 @@
 
                 <ImageView
                     android:layout_marginTop="3dp"
-                    android:id="@+id/imageView4"
+                    android:id="@+id/rating_one"
                     android:layout_width="15dp"
                     android:layout_height="15dp"
                     android:src="@drawable/estrella"
@@ -59,8 +58,9 @@
                     android:layout_height="wrap_content"
                     android:text="5.0"
                     android:textStyle="bold"
-                    app:layout_constraintStart_toEndOf="@+id/imageView4"
+                    app:layout_constraintStart_toEndOf="@+id/rating_one"
                     app:layout_constraintTop_toTopOf="parent"/>
+
 
                 <ImageView
                     android:layout_width="20dp"
