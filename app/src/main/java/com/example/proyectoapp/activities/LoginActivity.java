@@ -26,7 +26,7 @@ import java.util.Map;
 
 public class LoginActivity extends AppCompatActivity {
 
-    private static final String URL_LOGIN = "http://192.168.1.18/restaurant/login.php";
+    private static final String URL_LOGIN = "http://192.168.43.121/restaurant/login.php";
     private EditText editTextEmail; // Campo para el email
     private EditText editTextPassword; // Campo para la contraseña
     private ImageButton visibilidadContraseña2; // Botón para mostrar/ocultar contraseña
@@ -68,17 +68,16 @@ public class LoginActivity extends AppCompatActivity {
         String email = editTextEmail.getText().toString().trim();
         String password = editTextPassword.getText().toString().trim();
 
-        /*if (email.isEmpty() || password.isEmpty()) {
+        if (email.isEmpty() || password.isEmpty()) {
             Toast.makeText(this, "Por favor, ingresa tu email y contraseña", Toast.LENGTH_SHORT).show();
             return;
-        }*/
+        }
 
         loginUser(email, password);
     }
 
     // Función que envía las credenciales al servidor para validarlas
     private void loginUser(final String email, final String password) {
-        startActivity(new Intent(LoginActivity.this, MainActivity.class));
         StringRequest stringRequest = new StringRequest(
                 Request.Method.POST,
                 URL_LOGIN,
@@ -87,6 +86,7 @@ public class LoginActivity extends AppCompatActivity {
                     public void onResponse(String response) {
                         if (response.trim().equals("Login exitoso")) {
                             // aqui se pone la entrada a main
+                            startActivity(new Intent(LoginActivity.this, MainActivity.class));
                             Toast.makeText(LoginActivity.this, "Bienvenido", Toast.LENGTH_SHORT).show();
                         } else {
                             Toast.makeText(LoginActivity.this, "Credenciales incorrectas", Toast.LENGTH_SHORT).show();

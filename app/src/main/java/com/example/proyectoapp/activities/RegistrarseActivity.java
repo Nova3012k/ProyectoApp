@@ -31,7 +31,7 @@ import java.util.Map;
 public class RegistrarseActivity extends AppCompatActivity{
 
     RequestQueue requestQueue;
-    private static final String URL1 = "http://192.168.1.18/restaurant/registrar.php";
+    private static final String URL1 = "http://192.168.43.121/restaurant/registrar.php";
     private EditText editText;
     private EditText editText2;
     private EditText editText3;
